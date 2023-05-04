@@ -1,9 +1,6 @@
 import {useState, useEffect} from 'react';
-//const dotenv = require("dotenv").config();
 
-
-const API_BASE = "https://simple-mern-api-ltz7.onrender.com";
-
+const API_BASE = process.env.REACT_APP_BASE_URL
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -18,10 +15,8 @@ function App() {
 
   const GetTodos = () => {
     fetch(API_BASE + "/todos")
-      //.then(res=> console.log(res.json()))
       .then(res=> res.json())
       .then(data=> setTodos(data))
-      //.then(data=>console.log(data))
       .catch(err => console.error("Error:", err));
   }
 
