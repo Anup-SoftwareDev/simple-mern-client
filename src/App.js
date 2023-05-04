@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-//const API_BASE = "http://localhost:3001";
+
 const API_BASE = "https://simple-mern-api-ltz7.onrender.com";
 
 function App() {
